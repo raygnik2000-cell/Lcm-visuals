@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCM Visuals - Neo-Brutalism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .brutal-card {
+            border: 3px solid #000;
+            box-shadow: 5px 5px 0px 0px #000;
+            transition: all 0.15s ease;
+        }
+        .brutal-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px 0px #000;
+        }
+        .brutal-btn {
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0px 0px #000;
+        }
+        .brutal-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px #000;
+        }
+    </style>
+</head>
+<body class="bg-[#FFFDF7] text-black min-h-screen flex flex-col selection:bg-[#FFE600]">
+
+    <!-- Navbar -->
+    <header class="border-b-4 border-black bg-[#FFE600] sticky top-0 z-40 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-black text-white p-2 font-bold text-xl">LCM</div>
+                <span class="font-bold text-lg tracking-wider">VISUALS</span>
+            </div>
+            <nav class="hidden md:flex gap-8 font-bold text-sm uppercase">
+                <a href="#cursos" class="hover:underline">// Cursos</a>
+                <a href="#software" class="hover:underline">// Software</a>
+                <a href="#metodologia" class="hover:underline">// Método</a>
+            </nav>
+            <div class="flex gap-3">
+                <button onclick="document.getElementById('modal-info').classList.remove('hidden')" class="brutal-btn bg-[#4D96FF] text-white px-4 py-2 text-xs font-bold uppercase">Más Información</button>
+                <button onclick="document.getElementById('modal-login').classList.remove('hidden')" class="brutal-btn bg-white px-4 py-2 text-xs font-bold uppercase">Entrar</button>
+                <button onclick="document.getElementById('modal-register').classList.remove('hidden')" class="brutal-btn bg-[#FF6B6B] text-white px-4 py-2 text-xs font-bold uppercase">Registro</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <span class="bg-[#4D96FF] text-white font-bold text-xs uppercase px-3 py-1 border-2 border-black inline-block mb-6 shadow-[3px_3px_0px_0px_#000]">Masterclass 2026</span>
+        <h1 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-6">
+            Domina el software de <span class="bg-[#FFE600] px-2 border-2 border-black">diseño gráfico</span>
+        </h1>
+        <p class="text-base md:text-lg font-medium mb-8 max-w-2xl mx-auto">
+            Aprende Photoshop, Illustrator, Figma y Premiere Pro mediante proyectos reales.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#cursos" class="brutal-btn bg-[#6BCB77] text-black font-bold text-base px-8 py-4 inline-block uppercase">Ver Catálogo de Cursos</a>
+            <button onclick="document.getElementById('modal-info').classList.remove('hidden')" class="brutal-btn bg-[#4D96FF] text-white font-bold text-base px-8 py-4 inline-block uppercase">Quiero más información _</button>
+        </div>
+    </section>
+
+    <!-- Cursos -->
+    <section id="cursos" class="py-16 px-6 max-w-7xl mx-auto w-full border-t-4 border-black">
+        <h2 class="text-3xl font-bold uppercase mb-8">Programas Destacados</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="brutal-card bg-[#FFD93D] p-6">
+                <div class="text-3xl font-bold mb-2">Ps</div>
+                <h3 class="text-xl font-bold mb-2">Adobe Photoshop</h3>
+                <p class="text-xs font-medium mb-4">Retoque digital, fotomontaje y tratamiento de color profesional.</p>
+                <span class="bg-black text-white text-[10px] px-2 py-1 uppercase font-bold">24 Horas</span>
+            </div>
+            <div class="brutal-card bg-[#FF6B6B] text-white p-6">
+                <div class="text-3xl font-bold mb-2">Ai</div>
+                <h3 class="text-xl font-bold mb-2">Adobe Illustrator</h3>
+                <p class="text-xs font-medium mb-4 text-slate-100">Ilustración vectorial, desarrollo de marcas e iconografía.</p>
+                <span class="bg-white text-black text-[10px] px-2 py-1 uppercase font-bold">20 Horas</span>
+            </div>
+            <div class="brutal-card bg-[#4D96FF] text-white p-6">
+                <div class="text-3xl font-bold mb-2">Fg</div>
+                <h3 class="text-xl font-bold mb-2">Figma UI/UX</h3>
+                <p class="text-xs font-medium mb-4 text-slate-100">Diseño de interfaces web/app y prototipado interactivo.</p>
+                <span class="bg-white text-black text-[10px] px-2 py-1 uppercase font-bold">30 Horas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software -->
+    <section id="software" class="py-16 px-6 bg-[#FFE600] border-t-4 border-black">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold uppercase mb-8">Ecosistema de Software</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="brutal-card bg-white p-4 font-bold text-center">Photoshop</div>
+                <div class="brutal-card bg-white p-4 font-bold text-center">Illustrator</div>
+                <div class="brutal-card bg-white p-4 font-bold text-center">Figma</div>
+                <div class="brutal-card bg-white p-4 font-bold text-center">Premiere</div>
+                <div class="brutal-card bg-white p-4 font-bold text-center">After Effects</div>
+                <div class="brutal-card bg-white p-4 font-bold text-center">Canva Pro</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología -->
+    <section id="metodologia" class="py-16 px-6 max-w-7xl mx-auto w-full border-t-4 border-black">
+        <h2 class="text-3xl font-bold uppercase mb-8 text-center">Metodología de Estudio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="brutal-card bg-white p-6">
+                <h3 class="font-bold text-lg mb-2">1. Proyectos Reales</h3>
+                <p class="text-xs">Ejercicios prácticos con entregables de nivel profesional.</p>
+            </div>
+            <div class="brutal-card bg-white p-6">
+                <h3 class="font-bold text-lg mb-2">2. Tablero Kanban</h3>
+                <p class="text-xs">Seguimiento de tareas y revisiones en nuestro sistema LMS.</p>
+            </div>
+            <div class="brutal-card bg-white p-6">
+                <h3 class="font-bold text-lg mb-2">3. Certificado</h3>
+                <p class="text-xs">Acredita tus habilidades técnicas al finalizar cada módulo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL SOLICITAR INFORMACIÓN -->
+    <div id="modal-info" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden p-4">
+        <div class="brutal-card bg-[#FFE600] p-6 w-full max-w-lg text-black relative">
+            <div class="flex justify-between items-center mb-6 pb-3 border-b-4 border-black">
+                <h3 class="font-bold text-xl uppercase tracking-wider flex items-center gap-2">
+                    <span class="bg-black text-[#FFE600] px-2 py-0.5">//</span>
+                    MÁS INFORMACIÓN
+                </h3>
+                <button onclick="document.getElementById('modal-info').classList.add('hidden')" class="brutal-btn bg-white px-2 py-1 font-bold text-sm hover:bg-[#FF6B6B] hover:text-white transition">
+                    ✕
+                </button>
+            </div>
+
+            <form id="form-info" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase mb-1">Nombre Completo *</label>
+                    <input type="text" id="info-name" required placeholder="EJ: CARLOS MENDOZA" class="w-full border-2 border-black p-2.5 text-sm font-medium bg-white focus:outline-none focus:bg-[#FFFDF7]">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold uppercase mb-1">Correo Electrónico *</label>
+                        <input type="email" id="info-email" required placeholder="USUARIO@CORREO.COM" class="w-full border-2 border-black p-2.5 text-sm font-medium bg-white focus:outline-none focus:bg-[#FFFDF7]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase mb-1">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="info-phone" required placeholder="+57 300 000 0000" class="w-full border-2 border-black p-2.5 text-sm font-medium bg-white focus:outline-none focus:bg-[#FFFDF7]">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase mb-1">Software o Programa de Interés *</label>
+                    <select id="info-course" required class="w-full border-2 border-black p-2.5 text-sm font-bold bg-white focus:outline-none">
+                        <option value="" disabled selected>SELECCIONA UN PROGRAMA...</option>
+                        <option value="Adobe Photoshop">ADOBE PHOTOSHOP AVANZADO</option>
+                        <option value="Adobe Illustrator">ADOBE ILLUSTRATOR VECTORIAL</option>
+                        <option value="Figma UI/UX">FIGMA UI/UX DESIGN</option>
+                        <option value="Premiere Pro">ADOBE PREMIERE PRO</option>
+                        <option value="After Effects">AFTER EFFECTS MOTION GRAPHICS</option>
+                        <option value="Todos / Asesoria General">ASESORÍA GENERAL DE PROGRAMAS</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase mb-1">Mensaje o Pregunta</label>
+                    <textarea id="info-message" rows="3" placeholder="¿TIENES DUDAS SOBRE HORARIOS O MODALIDADES?" class="w-full border-2 border-black p-2.5 text-sm font-medium bg-white focus:outline-none focus:bg-[#FFFDF7] resize-none"></textarea>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-3 border-t-2 border-black">
+                    <button type="button" onclick="document.getElementById('modal-info').classList.add('hidden')" class="brutal-btn bg-white text-black font-bold text-xs uppercase px-4 py-2.5">
+                        Cancelar
+                    </button>
+                    <button type="submit" id="btn-submit-info" class="brutal-btn bg-[#6BCB77] text-black font-bold text-xs uppercase px-6 py-2.5">
+                        Enviar Solicitud _
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL LOGIN -->
+    <div id="modal-login" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden">
+        <div class="brutal-card bg-white p-6 w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg uppercase">Iniciar Sesión</h3>
+                <button onclick="document.getElementById('modal-login').classList.add('hidden')" class="font-bold">✕</button>
+            </div>
+            <input type="email" placeholder="Correo" class="border-2 border-black p-2 w-full mb-3 text-sm font-medium">
+            <input type="password" placeholder="Contraseña" class="border-2 border-black p-2 w-full mb-4 text-sm font-medium">
+            <button class="brutal-btn bg-[#6BCB77] w-full py-2 font-bold uppercase text-xs">Entrar</button>
+        </div>
+    </div>
+
+    <!-- MODAL REGISTRO -->
+    <div id="modal-register" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden">
+        <div class="brutal-card bg-white p-6 w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg uppercase">Crear Cuenta</h3>
+                <button onclick="document.getElementById('modal-register').classList.add('hidden')" class="font-bold">✕</button>
+            </div>
+            <input type="text" placeholder="Nombre completo" class="border-2 border-black p-2 w-full mb-3 text-sm font-medium">
+            <input type="email" placeholder="Correo" class="border-2 border-black p-2 w-full mb-3 text-sm font-medium">
+            <input type="password" placeholder="Contraseña" class="border-2 border-black p-2 w-full mb-4 text-sm font-medium">
+            <button class="brutal-btn bg-[#FF6B6B] text-white w-full py-2 font-bold uppercase text-xs">Registrarse</button>
+        </div>
+    </div>
+
+</body>
+</html>
